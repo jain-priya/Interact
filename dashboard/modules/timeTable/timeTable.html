@@ -1,0 +1,182 @@
+<div ng-controller="timectrl">
+    
+      <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Hello, <span>Welcome Here</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-4 p-l-0 title-margin-left">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">Time Table</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+                <!-- /# row -->
+                <section id="main-content">
+                    <div class="row">
+
+                        <!-- /# column -->
+                        <div class="col-lg-12">
+                             
+               
+                            <div class="card">
+                                <div class="card-title">
+                                    <h4>Retreive Time Table For:</h4>
+                                    
+                                </div>
+                                <div class="card-body">
+                                    <div class="basic-form">
+                                        <form>
+                                           <div class="row">
+                                            <div class="form-group col-sm-6">
+                                                <label>Branch</label>
+                                                <input type="text" ng-model="branch" class="form-control" placeholder="IT,CSE,EEE,ECE">
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label>Semester</label>
+                                                <input type="text" class="form-control" ng-model="sem" placeholder="1-8">
+                                            </div>
+                                            </div>
+                                            <button  class="btn btn-primary" ng-click="timeTable(branch,sem)">Retreive</button>
+                                        </form>
+                                    </div>
+                                </div>
+                       
+                    </div>
+                            <div class="card">
+                                <div class="card-title">
+                                    <h4>Time Table</h4>
+                                    <h5>
+                                        
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+<!--
+                                <ul ng-repeat="shw in show">
+                                    <li>{{shw[0]}}</li>
+                                    
+                                </ul>
+                                
+-->
+                                
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                               <tr><th colspan="9" style="text-align: center">Periods</th></tr>
+                                                
+                                                   <tr>
+                                                 
+                                                    <th>Day</th>
+                                                    <th>9:15 A.M.-10:15 A.M.</th>
+                                                    <th>10:15 A.M.-11:15 A.M.</th>
+                                                    <th>11:15 A.M.-12:15 P.M.</th>
+                                                    <th>12:15 P.M.-1 P.M.</th>
+                                                    <th>1 P.M.-2 P.M.</th>
+                                                    <th>2 P.M.-3 P.M.</th>
+                                                    <th>3 P.M.-4 P.M.</th>
+                                                    <th>4 P.M.-5 P.M.</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr  ng-repeat="shw in show">
+                                                  
+                                                   <td>{{shw[0]}}</td>
+                                                   <td>{{shw[1]}}</td>
+                                                   <td>{{shw[2]}}</td>
+                                                   <td>{{shw[3]}}</td>                                                   <td>{{shw[4]}}</td>                                                   <td>{{shw[5]}}</td>                                                   <td>{{shw[6]}}</td>
+                                                   
+                                                   <td>{{shw[7]}}</td>
+                                                   <td>{{shw[8]}}</td>
+                                                  </tr>
+                                                 
+ 
+                                            </tbody>
+                                        </table>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# column -->
+<!--
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-title">
+                                    <h4>Table Hover </h4>
+                                    
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover ">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Name</th>
+                                                    <th>Status</th>
+                                                    <th>Date</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Kolor Tea Shirt For Man</td>
+                                                    <td><span class="badge badge-primary">Sale</span></td>
+                                                    <td>January 22</td>
+                                                    <td class="color-primary">$21.56</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Kolor Tea Shirt For Women</td>
+                                                    <td><span class="badge badge-success">Tax</span></td>
+                                                    <td>January 30</td>
+                                                    <td class="color-success">$55.32</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Blue Backpack For Baby</td>
+                                                    <td><span class="badge badge-danger">Extended</span></td>
+                                                    <td>January 25</td>
+                                                    <td class="color-danger">$14.85</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                             /# card 
+                        </div>
+-->
+                        <!-- /# column -->
+                    </div>
+                    <!-- /# row -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+</div>

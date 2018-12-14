@@ -1,0 +1,108 @@
+  <div class="content-wrap" ng-controller="noticectrl">
+        <div class="main">
+           
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Hello, <span>Welcome Here</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-4 p-l-0 title-margin-left">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">Extras</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+                 <div class="container-fluid">
+               <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-title">
+                                <button class="btn btn-primary" ng-click="getData('events')">Events</button>
+                                <button class="btn btn-primary" ng-click="getData('circular')">Notices/Circulars</button>
+                                <button class="btn btn-primary" ng-click="getData('assignment')">Assignments</button>
+                                
+                                <br><br>
+                                <h3 ng-if="check=='circular'">Notice/Circular</h3>
+                                 <h3 ng-if="check=='events'">Events</h3>
+                                  <h3 ng-if="check=='assignment'">Assignments</h3>
+                                </div>
+                            </div>
+                   </div>
+                </div>
+                <!-- /# row -->
+                <section id="main-content" >
+                    <div class="row" >
+                     
+
+                        <div class="col-lg-6" ng-if="check=='events'" ng-repeat="obj in extra">
+                            <div class="card" >
+                                <div class="card-title">
+                                    <h4>{{obj.title}}</h4>
+                                </div>
+                                <div class="card-body">
+                                   <p><b>Description : </b> {{obj.description}}
+                                    <br>
+                                    <b>Dated : </b>{{obj.dated}}
+                                   </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                           <div class="col-lg-6" ng-if="check=='assignment'" ng-repeat="obj in extra">
+                            <div class="card" >
+                                <div class="card-title">
+                                    <h4>{{obj.subject}}</h4>
+                                </div>
+                                <div class="card-body">
+                                   <ul>
+                                       <li><b>Stream : </b> {{obj.stream}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Semester : </b>{{obj.semester}}</li>
+                                       <li><b>Teacher Name : </b>{{obj.teacher_name}}</li>
+                                       <li><b>Ques: </b>{{obj.questions}}</li>
+                                       <li><b>PDF LINK : </b><a href="{{obj.pdf_link}}" style="color:blue">Click Here </a></li>
+                                       <li><b>Dated Posted : </b>{{obj.date_posted}}</li>
+                                       <li><b>Deadline : </b>{{obj.deadline}}</li>
+                                   </ul>
+                                   
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-6" ng-if="check=='circular'" ng-repeat="obj in extra">
+                            <div class="card" >
+                                <div class="card-title">
+                                    <h4>{{obj.subject}}</h4>
+                                </div>
+                                <div class="card-body">
+                                   <ul>
+                                       <li><b>Text : </b> {{obj.text}}</li>
+                                       <li><b>Issued By : </b>{{obj.addressor_name}}</li>
+                                       <li><b>Issued For : </b>{{obj.addressor_post}}</li>
+                                       <li><b>Dated : </b>{{obj.dated}}</li>
+                                   </ul>
+                                   
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  
+
+                   
+                </section>
+            </div>
+        </div>
+    </div>
